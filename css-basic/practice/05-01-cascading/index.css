@@ -1,0 +1,16 @@
+* {
+    background: yellow;
+}
+
+div {
+    background: aqua;
+}
+
+.text-class {
+    background:  blue;
+}
+
+#text-id {
+   background: rgba(204, 152, 152,0.35);
+
+}

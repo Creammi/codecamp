@@ -1,0 +1,144 @@
+* {
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    background-color: #eeeeee;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #AACDFF;
+    padding: 50px 0;
+    /* width: 540px;
+    height: 600px;
+    margin : 50px;
+    border: 1px solid #AACDFF;
+    box-shadow: 7px 7px 39px rgba(0, 104, 255, 0.25);
+    border-radius: 10px;
+    background-color: white;
+    padding: 30px; */
+}
+
+.wrapper {
+    width: 620px;
+    padding: 40px 30px;
+    background-color: white;
+    border: 1px solid #AACDFF;
+    border-radius: 10px;
+}
+
+.wrapper__head{
+    border-bottom: 1px dashed grey;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+.wrapper__head__title {
+    /* width: 100%; */
+    font-weight: bold;
+    font-size: 32px;   
+    color: white;
+    background-color: orange;
+    padding:5px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.wrapper__head__sub-title {
+    font-size: 18px;
+    padding: 10px 0;
+}
+
+#point {
+    text-decoration:underline;
+    font-size: 22px;
+    font-weight:  bold;
+    text-decoration-color: orange;
+    color: orange;
+    font-weight: bold;
+    margin-top: 15px;
+    display: block;
+}
+
+.wrapper__body {
+    padding: 20px 30px;
+    border: 1px solid #dddddd;
+    /* box-shadow: 7px 7px 39px rgba(0, 104, 255, 0.25); */
+}
+
+.diary-title {
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #f4f4f4;
+    margin-bottom:  20px;
+}
+.kimchi {
+    color: red;
+    font-weight: 600;
+}
+
+.egg {
+    color: orange;
+    font-weight: 600;
+}
+
+.highlight {
+    color:blue;
+    font-size: 22px;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.diary-date {
+    color: #919191;
+    font-size: 14px;
+    text-align: right;
+}
+
+.header {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid grey;    
+}
+
+.header-inner {
+    width: 900px;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 100px;
+    padding-top:  15px;
+}
+
+.logo h1 a {
+    text-decoration:  none;
+    color: orange;
+
+}
+.menu__ul {
+    display: flex;
+    flex-direction: row;
+    padding-top:  8px;
+}
+.menu__ul li {
+    list-style: none;
+}
+.menu__ul li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black;
+}
+.user {
+    width: 100px;
+    padding-top:  22px;
+}

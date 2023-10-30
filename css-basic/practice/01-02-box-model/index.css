@@ -1,0 +1,20 @@
+/* .box1 {
+    background-color: grey;
+    width: 200px;
+    height:  200px;
+    border: 2px solid red;
+
+    padding: 50px;
+    margin: 50px;
+} */
+
+div {
+    width: 200px;
+    height: 200px;
+    background-color: azure; 
+   box-sizing: border-box;
+}
+
+.box1 {
+   padding: 50px;
+}

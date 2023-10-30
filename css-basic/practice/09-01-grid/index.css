@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+  }
+
+  .container {
+    border: 2px solid red;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows:  repeat(4, 100px);
+    grid-gap: 5px;
+  }
+
+  .item {
+    border: 2px solid blue;
+  }
+
+  .item1 {
+    grid-column: 1 / span2 ;
+    grid-row: 1 / span4;
+    background: green;
+  }

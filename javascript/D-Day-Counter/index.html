@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>D-Dat-Counter</title>
+    <link rel="stylesheet" href="./index.css" />
+    <script src="./index.js"></script>
+  </head>
+  <body>
+    <h1>D-Day-Counter</h1>
+    <div id="d-day-container">
+      <div class="d-day-child-container">
+        <span id="days">0</span>
+        <span>일</span>
+      </div>
+      <div class="d-day-child-container">
+        <span id="hours">0</span>
+        <span>시간</span>
+      </div>
+      <div class="d-day-child-container">
+        <span id="min">0</span>
+        <span>분</span>
+      </div>
+      <div class="d-day-child-container">
+        <span id="sec">0</span>
+        <span>초</span>
+      </div>
+    </div>
+    <div id="target-selector">
+      <input id="target-year-input" class="target-input" size="5" /> -
+      <input id="target-month-input" class="target-input" size="5" /> -
+      <input id="target-date-input" class="target-input" size="5" />
+    </div>
+    <button onclick="CounterMaker()" id="start-btn">카운트다운 시작</button>
+  </body>
+</html>

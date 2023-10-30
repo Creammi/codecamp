@@ -1,0 +1,28 @@
+
+* {
+    box-sizing: border-box;
+}
+.button1:active {
+        background: red;
+}
+
+.input1:focus {
+    background: green;
+}
+
+.link1:visited {
+    color: red;
+}
+.box1 {
+    width: 200px;
+    height: 200px;
+    background: yellowgreen;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.box1:after {
+    content:" 나는 가상요소입니다.";
+    display: block;
+    background: blue;
+}

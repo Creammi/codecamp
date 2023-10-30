@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+  }
+
+.container {
+  background: red;
+  padding: 30px;
+}
+
+.contents {
+  color: white;
+}
+
+.contents:after {
+  content: "저는 PC 입니다.";
+}
+
+/* PC 기본설정 */
+
+@media screen and (max-width : 767px) {
+  /* mobile */
+  .container {
+    background: blue;
+  }
+  
+  .contents:after {
+    content: "저는 mobile 입니다.";
+  }
+}
+
+@media screen and (max-width : 768px) {
+  /* tablet */
+  .container {
+    background: green;
+  }
+  
+  .contents:after {
+    content: "저는 tablet 입니다.";
+  }
+}
+
+
