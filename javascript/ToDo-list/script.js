@@ -17,8 +17,8 @@ const createTodo = function (storageData) {
                 console.log(newBtn);
                 
                 newBtn.addEventListener('click' , () => {
-                newLi.classList.toggle('complete');
-                saveItemsFn();
+                    newLi.classList.toggle('complete');
+                    saveItemsFn();
                 });
 
                 newLi.addEventListener('dblclick',() => {
@@ -28,7 +28,7 @@ const createTodo = function (storageData) {
                 
                 if (storageData?.complete) { //optioning chaining : storage data 가 undefine 이거나 null 일때는 무시하고 error 발생하지 않는다.
                     newLi.classList.add('complete');
-                }
+                };
 
                 newSpan.textContent = todoContents;
                 newLi.appendChild(newBtn);
@@ -41,7 +41,7 @@ const createTodo = function (storageData) {
 
 const keyCodeCheck = function() {
                 // console.log(window.event.keyCode === 13)
-                if ( window.event.keyCode === 13 && todoInput.value) {
+                if ( window.event.keyCode === 13 && todoInput.value.trim() !== '') {
                     createTodo();
                 }
 };
@@ -53,6 +53,7 @@ const deleteAll = function (){
                 }
                 saveItemsFn();
 };
+
 const saveItemsFn = function () {
             const saveItems = [];
             
@@ -74,3 +75,49 @@ if (savedTodoList) {
         createTodo(savedTodoList[i]);
     }
 };
+
+const weatherSearch = function(position) {
+    //console.log(position.latitude);
+    fetch(
+        //`https://api.openweathermap.org/data/2.5/onecall?lat=${position.latitude}&lon=${position.longitude}&appid=873148113cf6c6218096b7d430f126cf`
+        //`http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=873148113cf6c6218096b7d430f126cf`
+        `http://api.openweathermap.org/data/2.5/weather?lat=${position.latitude}&lon=${position.longitude}&APPID=873148113cf6c6218096b7d430f126cf`
+        )
+        .then((res) =>{
+            //console.log(res.json());
+            return res.json();
+        })
+        .then((json) => {
+            console.log(json.name,json.weather[0].description);
+        })
+        .catch((err) =>{
+            console.error(err); 
+        });
+};
+const accessToGeo = function(position) {
+    const positionObj = {
+        latitude:   position.coords.latitude,
+        longitude : position.coords.longitude,
+    };
+
+    weatherSearch(positionObj);
+};
+
+const askForLocation = function() {
+     navigator.geolocation.getCurrentPosition(accessToGeo , (err) => {
+        console.log(err);
+    });
+};
+askForLocation();
+
+// const promiseTest = function() {
+//     return new Promise((resolver , reject)=>{
+//         setTimeout(()=>{
+//             resolver('성공');
+//         }, 5000);
+//     });
+// };
+
+// promiseTest().then((res)=>{
+//     console.log(res);
+// });
